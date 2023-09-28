@@ -30,10 +30,20 @@ the_tate_artists <- readr::read_csv("data/the-tate-artists.csv")
 
 ### Exercise 1
 
-The `the_tate` dataset has \_\_\_ unique artists who worked from \_\_\_ to \_\_\_. The works were acquired between the years \_\_\_ and \_\_\_.
+The `the_tate` dataset has 3336 unique artists who worked from 1545 to 2012. The works were acquired between the years 1823 and 2013.
 
 ```{r}
+the_tate |> dplyr::summarize(
+  artist=length(unique(artist)),
+   minYear = min(year, na.rm = TRUE),  
+    maxYear = max(year, na.rm = TRUE), 
+    minacquisitionYear = min(acquisitionYear, na.rm = TRUE), 
+    maxacquisitionYear = max(acquisitionYear, na.rm = TRUE),
+)
+```
 
+```{r}
+DataExplorer::introduce(the_tate)
 ```
 
 ### Exercise 2
