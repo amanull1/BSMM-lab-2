@@ -1,8 +1,8 @@
 ---
 title: "BSMM-lab-2"
 subtitle: "BSMM 8740 Fall 2023"
-author: "Add your name here"
-date: "Add the date here"
+author: "Amanullah"
+date: "28 September, 2023"
 format: html
 editor: visual
 self-contained: true
@@ -11,6 +11,14 @@ self-contained: true
 ## Setup
 
 Load packages and data:
+
+```{r}
+#loading packages
+library(dplyr)
+library(readr)
+library(magrittr)
+library(tidyverse)
+```
 
 ```{r load-pkg-data}
 #| message: false
@@ -23,6 +31,10 @@ the_tate_artists <- readr::read_csv("data/the-tate-artists.csv")
 ### Exercise 1
 
 The `the_tate` dataset has \_\_\_ unique artists who worked from \_\_\_ to \_\_\_. The works were acquired between the years \_\_\_ and \_\_\_.
+
+```{r}
+
+```
 
 ### Exercise 2
 
